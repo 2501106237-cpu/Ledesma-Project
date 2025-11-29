@@ -1,0 +1,166 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="portfolio-style.css">
+        <title>My Portfolio</title>
+    </head>
+    <body>
+        <header>
+            <h1>My Portfolio</h1>
+            <p>Aspiring Developer • Designer • Student • </p>
+        </header>
+
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero">
+            <h1>Hello, I'm <span>Ian Gabriel V. Ledesma</span></h1>
+            <p>Aspiring Developer • Designer • Student</p>
+            <button class="hero-btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View My Projects</button>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image-box">
+                    <img src="chopped.png" alt="Profile">
+                </div>
+                <div class="about-text">
+                    <p>
+                        Hello! I am a BUKSU studet currently pursuing a degree in Bachelor of Science in Information Technology
+                    with a specialization in C programming and Web Development. I have a passion for technolgoy and enjoy learning
+                    new things in the field of IT in my free time.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+<section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <div class="skill-title">HTML</div>
+            <div class="skill-bar-container">
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;"></div>
+                </div>
+                <span class="skill-percent">50%</span>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-title">CSS</div>
+            <div class="skill-bar-container">
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%;"></div>
+                </div>
+                <span class="skill-percent">65%</span>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-title">JavaScript</div>
+            <div class="skill-bar-container">
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 75%;"></div>
+                </div>
+                <span class="skill-percent">55%</span>
+            </div>
+        </div>
+        <!-- Add more skills similarly -->
+    </div>
+</section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="project1.png" alt="Project One">
+                    <h3>Project One</h3>
+                    <p>Utilizing HTML, CSS and JavaScript the goal of this project was a way to promote the businesses of Malaybalay City. 
+                    However I chose supporting the local coffee shops in Malaybalay City, using a Cafe website guide, that gives crucial information for tourists and locals.</p>
+                </div>
+                <div class="project-card">
+                    <img src="project2.png" alt="Project Two">
+                    <h3>Project Two</h3>
+                    <p>For this project we were given a task to create a login logout code that will print "incorrect" if the username and 
+                        password do not match what was given, here I utilized conditional statements like "if" and "else ifs" including loops
+                        such as while for the code to repeat.</p>
+                </div>
+            <div class="project-card">
+                    <img src="project3.png" alt="Project Three">
+                    <h3>Project Three</h3>
+                    <p>For this project, similar to Project Two, it was a simple login webpage, with a signup feature, here I wanted a more 
+                        outdoorsy scenic design, thus the background, and using an earthy tone for the colors, being appealable to the eyes.</p>
+                </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section id="gallery">
+            <h2 class="section-title">Hobby Gallery</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="hobby1.jpg" alt="Gallery 1" />
+                    <div class="img-desc">Skateboarding was one of my hobbies since I was a kid, however i stopped due to
+                        time, and pressures of school during that time but i recently started again however lost some skill due to this.
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="hobby2.jpg" alt="Gallery 2" />
+                    <div class="img-desc">I am technically new to guitar, i started playing during 10th grade where my friend
+                        introduced me to it, i started with the ukuelele then moved up to a guitar, my favorite things to play in 
+                        guitar are mostly bossa nova, and i generally like plucking style rather than a regular strumming style.
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="hobby 3.jpg" alt="Gallery 3" />
+                    <div class="img-desc">This isnt my setup, but I am an avid gamer, mostly my favorite genres of games are fighting, such as 
+                        tekken, mortal kombat and 2xko, i also like shooting games such as valorant.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name">https://github.com/2501106237-cpu/Project-webpage.git
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <footer>
+            &copy; 2025 Ian Gabriel V. Ledesma. All rights reserved.
+        </footer>
+
+        <button class="btn-top" id="topBtn">▲</button>
+
+        <script>
+            const topBtn = document.getElementById("topBtn");
+            window.onscroll = () => {
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    topBtn.style.display = "block";
+                } else {
+                    topBtn.style.display = "none";
+                }
+            };
+
+            topBtn.onclick = () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            };
+        </script>
+    </body>
+    </html>
